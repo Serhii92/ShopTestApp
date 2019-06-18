@@ -21,6 +21,7 @@ namespace EventBus
 			{
 				return new SubscriptionInfo(true, handlerType);
 			}
+
 			public static SubscriptionInfo Typed(Type handlerType)
 			{
 				return new SubscriptionInfo(false, handlerType);
