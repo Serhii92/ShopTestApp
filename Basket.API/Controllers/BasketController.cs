@@ -1,15 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+using Basket.API.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Basket.API.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class BasketController : ControllerBase
-    {
-    }
+	[Route("api/[controller]")]
+	[ApiController]
+	public class BasketController : ControllerBase
+	{
+		private readonly BasketContext _basketContext;
+
+		public BasketController(BasketContext basketContext)
+		{
+			_basketContext = basketContext ?? throw new ArgumentNullException(nameof(basketContext));
+		}
+	}
 }
