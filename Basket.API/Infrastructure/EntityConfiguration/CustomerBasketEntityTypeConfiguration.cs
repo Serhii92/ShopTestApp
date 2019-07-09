@@ -10,6 +10,8 @@ namespace Product.API.Infrastructure.EntityConfigurations
 		{
 			builder.ToTable("CustomerBasket");
 
+			builder.HasKey(ci => ci.BuyerId);
+
 			builder.Property(ci => ci.BuyerId)
 				.ForSqlServerUseSequenceHiLo("customer_busket_hilo")
 				.IsRequired();

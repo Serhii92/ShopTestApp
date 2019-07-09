@@ -115,7 +115,7 @@ namespace EventBusRabbitMQ
 			//_logger.LogInformation("Subscribing to event {EventName} with {EventHandler}", eventName, typeof(TH).GetGenericTypeName());
 
 			_subsManager.AddSubscription<T, TH>();
-			StartBasicConsume();
+			//StartBasicConsume();
 		}
 
 		private void DoInternalSubscription(string eventName)
@@ -222,7 +222,7 @@ namespace EventBusRabbitMQ
 			{
 				_consumerChannel.Dispose();
 				_consumerChannel = CreateConsumerChannel();
-				StartBasicConsume();
+				//StartBasicConsume();
 			};
 
 			return channel;

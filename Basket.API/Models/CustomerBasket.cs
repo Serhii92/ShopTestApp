@@ -7,13 +7,13 @@ namespace Basket.API.Models
 {
 	public class CustomerBasket
 	{
-		public string BuyerId { get; set; }
+		public int BuyerId { get; set; }
 		public List<BasketItem> Items { get; set; }
 
-		public CustomerBasket(string customerId)
-		{
-			BuyerId = customerId;
-			Items = new List<BasketItem>();
-		}
+		//public CustomerBasket(int customerId)
+		//{
+		//	BuyerId = customerId;
+		//	Items = new List<BasketItem>();
+		//}
 	}
 }
